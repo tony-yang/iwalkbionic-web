@@ -1,0 +1,22 @@
+version: "2.3"
+
+services:
+  iwalkbionic:
+    build:
+      context: .
+    networks:
+      - iwalkbionic
+    volumes:
+      - /var/log/iwalkbionic:/var/log/iwalkbionic
+    ports:
+      - "80:80"
+    restart: always
+    healthcheck:
+      test: ["CMD", "/usr/bin/curl", "-f", "http://www.iwalkbionic.com"]
+      interval: 2m
+      timeout: 5s
+      retries: 2
+      start_period: 1m
+
+networks:
+  iwalkbionic:
