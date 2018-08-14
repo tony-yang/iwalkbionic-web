@@ -12,7 +12,7 @@
 </head>
 
 <body>
-	<nav class="navbar navbar-dark bg-dark fixed-top">
+	<nav class="navbar navbar-dark navbar-expand-lg bg-dark fixed-top">
 		<div class="container">
 			<a class="navbar-brand" href="#">${title}</a>
 			<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-main" aria-expanded="false" aria-controls="navbar-main" aria-label="Toggle navigation">
