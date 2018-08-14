@@ -3,29 +3,26 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<title>${browser_title}</title>
 	<meta name="description" content="${meta_description}">
   <meta name="keywords" content="${meta_keyword}">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-	<link rel="stylesheet" type="text/css" href="${request.static_url('renovationwindsor:static/main.css')}">
+	<link rel="stylesheet" type="text/css" href="${request.static_url('iwalkbionic:static/main.css')}">
 </head>
 
 <body>
-	<nav class="navbar navbar-inverse navbar-fixed-top">
+	<nav class="navbar navbar-dark bg-dark fixed-top">
 		<div class="container">
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-					<span class="sr-only">Toggle navigation</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-				<a class="navbar-brand" href="#">${brand}</a>
-			</div> <!-- End div class navbar-header -->
-			<div id="navbar" class="navbar-collapse collapse">
-				<ul class="nav navbar-nav">
-					<li class="active"><a href="/">Home</a></li>
+			<a class="navbar-brand" href="#">${title}</a>
+			<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-main" aria-expanded="false" aria-controls="navbar-main" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div id="navbar-main" class="collapse navbar-collapse">
+				<ul class="navbar-nav">
+					<li class="nav-item active">
+						<a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+					</li>
 				</ul>
 			</div> <!-- End div id navbar -->
 		</div> <!-- End div class container -->
@@ -54,15 +51,15 @@
 				<div class="form-group">
 					<div class="form-check">
 						<input class="form-check-input" type="radio" name="requester-reason" id="requester-reason-personal" value="personal" checked>
-  					<label class="form-check-label" for="requester-reason-personal">${reason.personal_need}</label>
+  					<label class="form-check-label" for="requester-reason-personal">${personal_need}</label>
 					</div>
 					<div class="form-check">
 						<input class="form-check-input" type="radio" name="requester-reason" id="requester-reason-family" value="family">
-  					<label class="form-check-label" for="requester-reason-family">${reason.for_family}</label>
+  					<label class="form-check-label" for="requester-reason-family">${for_family}</label>
 					</div>
 					<div class="form-check">
 						<input class="form-check-input" type="radio" name="requester-reason" id="requester-reason-friend" value="friend">
-  					<label class="form-check-label" for="requester-reason-friend">${reason.for_friend}</label>
+  					<label class="form-check-label" for="requester-reason-friend">${for_friend}</label>
 					</div>
 				</div>
 				<input type="submit" value="${submit}" id="submit-request">
@@ -71,7 +68,7 @@
     </div>
     <footer>
       <p class="copyright">
-        &copy; 2002-2018 iWalkBionic.com. All rights reserved.
+        &copy; 2018 iWalkBionic.com. All rights reserved.
       </p>
     </footer>
   </div> <!-- End div class container -->

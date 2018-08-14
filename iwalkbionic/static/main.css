@@ -1,0 +1,7 @@
+.required {color: #ff0000; margin: 0px 5px; font-size: 130%;}
+
+footer {border-top: 1px solid #ddd; margin: 35px 0px;}
+footer p {margin: 25px 0px 30px;}
+
+/* Bootstrap override */
+.jumbotron {padding-top: 45px;}

@@ -9,7 +9,7 @@ class IwalkBionicViews:
     @view_config(route_name='index', renderer='views/index.pt')
     def index(self):
         title = 'iWalk Bionic'
-        description = 'iWalk Bionic is developing an exoskeleton prototype to assist patients with paraplegia (motor function loss below waist) and hemiplegia (motor function loss in one side of the body) to regain motor function. Please sign up for news update if you are interested.'
+        description = 'iWalk Bionic is developing an exoskeleton prototype to assist patients with paraplegia (motor function loss below the waist) and hemiplegia (motor function loss in one side of the body) to regain motor function. Please sign up for news update if you are interested.'
         self.reply['browser_title'] = title
         self.reply['meta_description'] = description
         self.reply['meta_keyword'] = 'bionic leg, exoskeleton, paraplegia, hemiplegia'
@@ -18,9 +18,9 @@ class IwalkBionicViews:
         self.reply['required'] = 'indicates a required field'
         self.reply['name'] = 'Name'
         self.reply['email'] = 'Email'
-        self.reply['reason']['personal_need'] = 'I want to learn more for myself'
-        self.reply['reason']['for_family'] = 'I want to learn more for a family member'
-        self.reply['reason']['for_friend'] = 'I want to learn more for a friend'
+        self.reply['personal_need'] = 'I want to learn more for myself'
+        self.reply['for_family'] = 'I want to learn more for a family member'
+        self.reply['for_friend'] = 'I want to learn more for a friend'
         self.reply['submit'] = 'Submit'
         self.reply['email_sent'] = ''
         if 'requester-name' in self.request.params:
@@ -34,3 +34,5 @@ Reason for inquiry {}
             email_command = 'echo "{}" | mail -s "iWalk Bionic product info sign up" -aFrom:"{}"\<{}\> -t test@gmail.com'.format(email_message, request_name, request_email)
             # os.system(email_command)
             self.reply['email_sent'] = 'Thank you for your interest. We have received your sign up and we will get back to you when we are ready.'
+
+        return self.reply
