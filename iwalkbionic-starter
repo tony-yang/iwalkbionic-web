@@ -1,9 +1,7 @@
 #!/bin/bash
 
-while :
-do
-  echo "$(date) Starting the postfix agent ..." >> /var/log/iwalkbionic/info.log
-  /etc/init.d/postfix start
-  echo "$(date) Starting the iwalkbionic webapp ..." >> /var/log/iwalkbionic/info.log
-  /usr/local/bin/pserve /root/iwalkbionic.ini --reload
-done
+echo "$(date) Starting the postfix agent ..." >> /var/log/iwalkbionic/info.log
+#/etc/init.d/postfix start
+echo "$(date) Starting the iwalkbionic webapp ..." >> /var/log/iwalkbionic/info.log
+#/usr/local/bin/pserve /root/iwalkbionic.ini --reload
+sleep 30m

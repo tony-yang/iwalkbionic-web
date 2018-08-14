@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>${browser_title}</title>
+	<meta name="description" content="${meta_description}">
+  <meta name="keywords" content="${meta_keyword}">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="${request.static_url('renovationwindsor:static/main.css')}">
+</head>
+
+<body>
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#">${brand}</a>
+			</div> <!-- End div class navbar-header -->
+			<div id="navbar" class="navbar-collapse collapse">
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="/">Home</a></li>
+				</ul>
+			</div> <!-- End div id navbar -->
+		</div> <!-- End div class container -->
+	</nav>
+
+  <div class="jumbotron">
+    <div class="container">
+      <h1>${title}</h1>
+      <p>${main_description}</p>
+    </div>
+  </div>
+
+  <div id="main" class="container">
+    <div id="signup">
+      <h2>Keep me posted</h2>
+      <form method='POST' action='${request.current_route_url()}'>
+				<p><span class="required">*</span> ${required}</p>
+				<div class="form-group">
+  				<label for="requester-name">${name}<span class="required">*</span></label>
+  				<input type="text" class="form-control" id="requester-name" name="requester-name" placeholder="${name}" value="" required="required" autofocus="autofocus">
+				</div>
+				<div class="form-group">
+  				<label for="requester-email">${email}<span class="required">*</span></label>
+  				<input type="email" class="form-control" id="requester-email" name="requester-email" placeholder="email@server" value="" required="required">
+				</div>
+				<div class="form-group">
+					<div class="form-check">
+						<input class="form-check-input" type="radio" name="requester-reason" id="requester-reason-personal" value="personal" checked>
+  					<label class="form-check-label" for="requester-reason-personal">${reason.personal_need}</label>
+					</div>
+					<div class="form-check">
+						<input class="form-check-input" type="radio" name="requester-reason" id="requester-reason-family" value="family">
+  					<label class="form-check-label" for="requester-reason-family">${reason.for_family}</label>
+					</div>
+					<div class="form-check">
+						<input class="form-check-input" type="radio" name="requester-reason" id="requester-reason-friend" value="friend">
+  					<label class="form-check-label" for="requester-reason-friend">${reason.for_friend}</label>
+					</div>
+				</div>
+				<input type="submit" value="${submit}" id="submit-request">
+			</form>
+
+    </div>
+    <footer>
+      <p class="copyright">
+        &copy; 2002-2018 iWalkBionic.com. All rights reserved.
+      </p>
+    </footer>
+  </div> <!-- End div class container -->
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
+</html>
