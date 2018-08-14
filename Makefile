@@ -16,4 +16,4 @@ prod-start:
 prod-stop:
 	sudo docker-compose down
 
-prod-restart: stop start
+prod-restart: prod-stop prod-start
