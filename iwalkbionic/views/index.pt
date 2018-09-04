@@ -36,6 +36,7 @@
   </div>
 
   <div id="main" class="container">
+		<p class='email-confirmation' tal:condition='email_sent'>${email_sent}</p>
     <div id="signup">
       <h2>Keep me posted</h2>
       <form method='POST' action='${request.current_route_url()}'>
