@@ -31,7 +31,7 @@ class IwalkBionicViews:
 Email {}
 Reason for inquiry {}
 """.format(request_name, request_email, request_reason)
-            email_command = 'echo "{}" | mail -s "iWalk Bionic product info sign up" -aFrom:"{}"\<{}\> -t tianyuyang658@yahoo.com'.format(email_message, request_name, request_email)
+            email_command = 'echo "{}" | mail -s "iWalk Bionic product info sign up" -aFrom:"{}"\<{}\> goku3ty@hotmail.com'.format(email_message, request_name, request_email)
             os.system(email_command)
             self.reply['email_sent'] = 'Thank you for your interest. We have received your sign up and we will get back to you when we are ready.'
 
